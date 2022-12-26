@@ -4,7 +4,7 @@
 	<groupId>in.javahome</groupId>
 	<artifactId>myweb</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.7-SNAPSHOT</version>
+	<version>0.0.16</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
 
@@ -12,7 +12,7 @@
 		<dependency>
 		    <groupId>org.apache.poi</groupId>
 		    <artifactId>poi</artifactId>
-		    <version>3.7</version>
+		    <version>4.1.2</version>
 		</dependency>
 
 		<dependency>
@@ -27,7 +27,12 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-	
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>4.1.2</version>
+		</dependency>
+
 	</dependencies>
 	<distributionManagement>
 		 <snapshotRepository>
@@ -37,7 +42,7 @@
 		
 		<repository>
 		    <id>nexus</id>
-		    <url>http://172.31.15.236:8081/repository/maven-releases/</url>
+		    <url>http://172.31.15.236:8081/repository/maven-release/</url>
 		</repository>
   	</distributionManagement>
 	
@@ -57,7 +62,13 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.19</version>
         </plugin>
+	<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.1</version>
+        </plugin>
     </plugins>
 </build>
 	
 </project>
+
